@@ -1,0 +1,59 @@
+<!-- ================== Events (page4.html) ================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - 鶯桃教會 YingTao Church</title>
+  <style>
+    :root { --primary:#4f46e5; --accent:#f1c40f; --bg:#f9fafb; --text:#333; }
+    body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text);transition:0.3s;}
+    .dark-mode{background:#111;color:#f1f1f1;}
+    header{background:var(--primary);padding:15px;}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;justify-content:center;}
+    nav ul li a{color:white;text-decoration:none;font-size:18px;transition:0.3s;}
+    nav ul li a:hover{color:var(--accent);}
+    .section{padding:40px 20px;max-width:1000px;margin:auto;}
+    .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+    .card{background:white;padding:20px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+    footer{margin-top:40px;padding:20px;background:#2c3e50;color:white;text-align:center;}
+    .lang-switch{position:fixed;top:20px;right:20px;padding:8px 12px;background:var(--accent);border-radius:6px;cursor:pointer;font-weight:bold;}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html" data-en="Home" data-zh="首頁">Home</a></li>
+      <li><a href="about.html" data-en="Faith Statement" data-zh="信仰告白">Faith Statement</a></li>
+      <li><a href="SundayService.html" data-en="Sunday Service" data-zh="主日聚會">Sunday Service</a></li>
+      <li><a href="ministries.html" data-en="Ministries" data-zh="事工">Ministries</a></li>
+      <li><a href="events.html" data-en="Events" data-zh="活動">Events</a></li>
+      <li><a href="contactus.html" data-en="Contact Us" data-zh="聯絡我們">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="lang-switch" id="langSwitch">中文 / EN</div>
+<section class="section">
+  <h1 data-en="Events" data-zh="活動">Events</h1>
+  <div class="grid">
+    <div class="card"><h3 data-en="Sharing Christmas Story in schools" data-zh="學校講聖誕故事">Sharing Christmas Story in schools</h3><p data-en="Dec 8-12" data-zh="12月8-12日">Dec 8-12</p></div>
+    <div class="card"><h3 data-en="Christmas Service" data-zh="聖誕節聚會">Christmas Service</h3><p data-en="Dec 24 – 7:00 PM" data-zh="12月24日 - 19:00">Dec 24 – 7:00 PM</p></div>
+    <div class="card"><h3 data-en="Youth Retreat" data-zh="籃球福音隊培訓">Basketball Gospel Team Training</h3><p data-en="Feb 5-7" data-zh="2月5-7日">Feb 5-7</p></div>
+    </div>
+</section>
+<footer>
+  <p>© 2025 YingTao Church. All rights reserved.</p>
+  <p data-en="No. 24, Ln. 115, Yonghe St., Yingge Dist., New Taipei City 239013, Taiwan (R.O.C.) | Sunday Service 10:00 AM" data-zh="新北市鶯歌區永和街115巷24號 | 主日聚會 10:00">No. 24, Ln. 115, Yonghe St., Yingge Dist., New Taipei City 239013, Taiwan (R.O.C.) | Sunday Service 10:00</p>
+</footer>
+<button id="darkToggle" style="position:fixed; bottom:20px; right:20px; padding:10px 14px; border-radius:8px; background:var(--primary); color:white;">Dark Mode</button>
+<script>
+const btn=document.getElementById('darkToggle');btn.onclick=()=>document.body.classList.toggle('dark-mode');
+const langSwitch=document.getElementById('langSwitch');let lang='en';langSwitch.onclick=()=>{
+lang=(lang==='en')?'zh':'en';
+document.querySelectorAll('[data-en]').forEach(el=>{el.textContent=el.getAttribute(`data-${lang}`);});
+};
+</script>
+</body>
+</html>
+
