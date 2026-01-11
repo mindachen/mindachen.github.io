@@ -65,10 +65,18 @@
             <span class="highlight">After making the remittance, please email (cherrychurchyt@gmail.com), and include the remitter’s name, organization, and contact information.</span>
         </p>
     </section>
-
+    <button id="darkToggle" style="position:fixed; bottom:20px; right:20px; padding:10px 14px; border-radius:8px; background:var(--primary); color:white;">Dark Mode</button>
+    <script>
+    const btn=document.getElementById('darkToggle');btn.onclick=()=>document.body.classList.toggle('dark-mode');
+    const langSwitch=document.getElementById('langSwitch');let lang='en';langSwitch.onclick=()=>{
+    lang=(lang==='en')?'zh':'en';
+    document.querySelectorAll('[data-en]').forEach(el=>{el.textContent=el.getAttribute(`data-${lang}`);});
+    };
+    </script>
 </body>
 
 </html>
+
 
 
 
