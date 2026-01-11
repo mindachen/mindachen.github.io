@@ -45,5 +45,18 @@
 		</h1>
 	</p>
   </section>
+	<footer>
+	  <p>© 2025 YingTao Church. All rights reserved.</p>
+	  <p data-en="No. 24, Ln. 115, Yonghe St., Yingge Dist., New Taipei City 239013, Taiwan (R.O.C.) | Sunday Service 10:00 AM" data-zh="新北市鶯歌區永和街115巷24號 | 主日聚會 10:00">    
+	  No. 24, Ln. 115, Yonghe St., Yingge Dist., New Taipei City 239013, Taiwan (R.O.C.) | Sunday Service 10:00<br>新北市鶯歌區永和街115巷24號 | 主日聚會 10:00</p>
+	</footer>
+	<button id="darkToggle" style="position:fixed; bottom:20px; right:20px; padding:10px 14px; border-radius:8px; background:var(--primary); color:white;">Dark Mode</button>
+	<script>
+		const btn=document.getElementById('darkToggle');btn.onclick=()=>document.body.classList.toggle('dark-mode');
+		const langSwitch=document.getElementById('langSwitch');let lang='en';langSwitch.onclick=()=>{
+		lang=(lang==='en')?'zh':'en';
+		document.querySelectorAll('[data-en]').forEach(el=>{el.textContent=el.getAttribute(`data-${lang}`);});
+		};
+	</script>
 </body>
 </html>
