@@ -47,9 +47,7 @@
         <div>
             <span class="highlight">註：匯款後，請來電(0926226779)或 email (cherrychurchyt@gmail.com) 通知林姊妹並註明匯款人名字，單位及聯絡資訊。</span>
         </div>
-
-        <!--hr style="margin: 3rem 0; border: 0; border-top: 1px solid #eee;"-->
-
+        <br>
         <h2>Bank Wiring (Foreign Remittance)</h2>
         <div class="grid">
             <ul>
@@ -60,22 +58,22 @@
                 <li><strong>Bank Swift Code:</strong> <span class="highlight">CCBCTWTP570</span></li>
             </ul>
         </div>
-
         <p style="font-size: 1.0rem; font-style: bold;">
             <span class="highlight">After making the remittance, please email (cherrychurchyt@gmail.com), and include the remitter’s name, organization, and contact information.</span>
         </p>
     </section>
     <button id="darkToggle" style="position:fixed; bottom:20px; right:20px; padding:10px 14px; border-radius:8px; background:var(--primary); color:white;">Dark Mode</button>
     <script>
-    const btn=document.getElementById('darkToggle');btn.onclick=()=>document.body.classList.toggle('dark-mode');
-    const langSwitch=document.getElementById('langSwitch');let lang='en';langSwitch.onclick=()=>{
-    lang=(lang==='en')?'zh':'en';
-    document.querySelectorAll('[data-en]').forEach(el=>{el.textContent=el.getAttribute(`data-${lang}`);});
-    };
+        const btn=document.getElementById('darkToggle');btn.onclick=()=>document.body.classList.toggle('dark-mode');
+        const langSwitch=document.getElementById('langSwitch');let lang='en';langSwitch.onclick=()=>{
+        lang=(lang==='en')?'zh':'en';
+        document.querySelectorAll('[data-en]').forEach(el=>{el.textContent=el.getAttribute(`data-${lang}`);});
+        };
     </script>
 </body>
 
 </html>
+
 
 
 
